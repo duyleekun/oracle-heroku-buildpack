@@ -10,7 +10,7 @@ end
 
 BUILD_DIR=ARGV[0]
 ENV_DIR=ARGV[2]
-BUILDPACK_DIR='./'
+BUILDPACK_DIR='..'
 
 puts "-----> Found an .oracle.yml"
 
