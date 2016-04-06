@@ -61,9 +61,9 @@ open("#{BUILD_DIR}/.profile.d/oracle.sh", "w") do |f|
 end
 
 indent "In order to provide an environment for subsequent buildpacks, a buildpack can create a $buildpack_dir/export script to be executed before the following buildpack is run."
-`mkdir -p #{BUILDPACK_DIR}/export`
+
 indent "cp #{BUILD_DIR}/.profile.d/oracle.sh #{BUILDPACK_DIR}/export/oracle.sh"
-`cp #{BUILD_DIR}/.profile.d/oracle.sh #{BUILDPACK_DIR}/export/oracle.sh`
+`cp #{BUILD_DIR}/.profile.d/oracle.sh #{BUILDPACK_DIR}/export`
 
 indent "Save build LD_LIBRARY_PATH to ENV_DIR"
 
