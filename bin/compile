@@ -10,7 +10,7 @@ end
 
 BUILD_DIR=ARGV[0]
 ENV_DIR=ARGV[2]
-BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
+BUILDPACK_DIR=$buildpack_dir
 
 puts "-----> Found an .oracle.yml"
 
