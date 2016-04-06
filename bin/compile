@@ -63,9 +63,9 @@ indent "In order to provide an environment for subsequent buildpacks, a buildpac
 #`mkdir -p #{BUILDPACK_DIR}/export`
 #indent "cp #{BUILD_DIR}/.profile.d/oracle.sh #{BUILDPACK_DIR}/export/oracle.sh"
 #`cp #{BUILD_DIR}/.profile.d/oracle.sh #{BUILDPACK_DIR}/export/oracle.sh`
+indent "Create #{BUILDPACK_DIR}/export script"
 open("#{BUILDPACK_DIR}/export", "w") do |f|
   f.puts "echo 'Runing oracle.sh script'"
-  ORACLE_HOME = "/app/#{ORACLE_INSTANT_CLIENT_DIR}"
   f.puts "export ORACLE_HOME=#{ORACLE_HOME}"
   f.puts "export LD_LIBRARY_PATH=#{ORACLE_HOME}:$LD_LIBRARY_PATH"
   f.puts "export PATH=#{ORACLE_HOME}:$PATH"
